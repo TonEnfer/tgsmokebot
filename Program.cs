@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Timers;
-
+using System.Threading;
 using System.Collections.Generic;
 
 namespace TG_bot
@@ -13,9 +13,9 @@ namespace TG_bot
             bot = Bot.GetBot();
             bot.Start();
             Console.WriteLine("Press any key to exit");
-
-            Console.ReadKey();
-            bot.Stop();
+            while(true)
+                Thread.Sleep(1000);
+            // Console.ReadKey();
         }
     }
 }
