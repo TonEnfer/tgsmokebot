@@ -11,7 +11,7 @@ namespace TG_bot
         public double replayTime;
         const double defaultReplayTime = 1000 * 60 * 60; // ms * sec * min;
         // const double defaultReplayTime = 5000; // ms * sec * min;
-        public Timer timer;
+        public TimerPlus timer;
 
         public Random random;
 
@@ -21,7 +21,8 @@ namespace TG_bot
             this.replayTime = replayTime;
 
             random = new Random();
-            timer = new Timer(replayTime + random.Next(1000 * 60 * 5));
+            // timer = new TimerPlus();
+            timer = new TimerPlus(replayTime + random.Next(1000 * 60 * 5));
             // timer = new Timer(replayTime);
             timer.AutoReset = true;
         }
