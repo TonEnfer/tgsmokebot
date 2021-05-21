@@ -1,1 +1,1 @@
-worker: dotnet TG_bot
+worker: cd $HOME/heroku_output && ./TG_bot
